@@ -56,7 +56,7 @@ class _MaterialColorPickerState extends State<MaterialColorPicker> {
   @protected
   void didUpdateWidget(covariant MaterialColorPicker oldWidget) {
     super.didUpdateWidget(oldWidget);
-    _initSelectedValue();
+    // _initSelectedValue();
   }
 
   void _initSelectedValue() {
