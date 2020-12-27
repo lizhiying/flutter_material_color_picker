@@ -88,8 +88,9 @@ class _MaterialColorPickerState extends State<MaterialColorPicker> {
 
   bool _isShadeOfMain(ColorSwatch mainColor, Color shadeColor) {
     for (final shade in _getMaterialColorShades(mainColor)) {
-      if (shade == shadeColor) return true;
+      if (shade.value == shadeColor.value) return true;
     }
+
     return false;
   }
 
@@ -146,6 +147,7 @@ class _MaterialColorPickerState extends State<MaterialColorPicker> {
       if (color[700] != null) color[700],
       if (color[800] != null) color[800],
       if (color[900] != null) color[900],
+      Color(0xFF263238),
     ];
   }
 
@@ -165,14 +167,14 @@ class _MaterialColorPickerState extends State<MaterialColorPicker> {
           iconSelected: widget.iconSelected,
           elevation: widget.elevation,
         ),
-      CircleColor(
-        color: Color(0xFF263238),
-        circleSize: widget.circleSize,
-        onColorChoose: () => _onShadeColorSelected(Color(0xFF263238)),
-        isSelected: _shadeColor == Color(0xFF263238),
-        iconSelected: widget.iconSelected,
-        elevation: widget.elevation,
-      ),
+      // CircleColor(
+      //   color: Color(0xFF263238),
+      //   circleSize: widget.circleSize,
+      //   onColorChoose: () => _onShadeColorSelected(Color(0xFF263238)),
+      //   isSelected: _shadeColor == Color(0xFF263238),
+      //   iconSelected: widget.iconSelected,
+      //   elevation: widget.elevation,
+      // ),
     ];
   }
 
