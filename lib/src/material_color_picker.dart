@@ -165,6 +165,14 @@ class _MaterialColorPickerState extends State<MaterialColorPicker> {
           iconSelected: widget.iconSelected,
           elevation: widget.elevation,
         ),
+      CircleColor(
+        color: Colors.black,
+        circleSize: widget.circleSize,
+        onColorChoose: () => _onShadeColorSelected(Colors.black),
+        isSelected: _shadeColor == Colors.black,
+        iconSelected: widget.iconSelected,
+        elevation: widget.elevation,
+      ),
     ];
   }
 
